@@ -3,7 +3,7 @@ name: ClockIn
 on:
   push:
     branches: 
-      - master
+      - main
   watch:
     types: started
   schedule:
