@@ -3,7 +3,7 @@ name: ClockIn
 on:
   push:
     branches: 
-      - main
+      - master
   watch:
     types: started
   schedule:
@@ -12,10 +12,10 @@ on:
 jobs:
   ClockIn:
     runs-on: ubuntu-latest
-    if: github.event.repository.owner.id == github.event.sender.id
+#     if: github.event.repository.owner.id == github.event.sender.id
     steps:
       - name: Checkout
-        uses: actions/checkout@main
+        uses: actions/checkout@master
       - name: Install python3
         run: |
           sudo -E apt-get -yqq update
